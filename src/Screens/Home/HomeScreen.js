@@ -103,11 +103,11 @@ export default function HomeScreen() {
           <Text style={styles.text3}>Popular</Text>
         </View>
 
-        <FlatList
-          data={popularData}
-          keyExtractor={(item) => item}
-          renderItem={() => <PopularCardComponent />}
-        />
+        <View>
+          {popularData.map((_, index) => (
+            <PopularCardComponent key={index.toString()} />
+          ))}
+        </View>
       </ScrollView>
     </View>
   );

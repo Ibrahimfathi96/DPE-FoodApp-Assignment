@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F5918E",
   },
   popularCardMainView: {
-    marginVertical: 20,
+    marginTop: 20,
     alignItems: "center",
   },
   popularCardView: {
