@@ -102,7 +102,6 @@ export default function HomeScreen() {
         <View>
           <Text style={styles.text3}>Popular</Text>
         </View>
-
         <View>
           {popularData.map((_, index) => (
             <PopularCardComponent key={index.toString()} />
