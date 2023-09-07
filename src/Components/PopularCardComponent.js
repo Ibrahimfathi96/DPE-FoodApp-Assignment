@@ -1,11 +1,12 @@
-import { View, Text, Image, Pressable } from "react-native";
-import React from "react";
+import { View, Text, Image, Pressable, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
 import styles from "../Screens/Home/HomeScreen.styles";
 import { Icon } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 
 export default function PopularCardComponent({ isLastItem }) {
   const navigation = useNavigation();
+  const [isAdded, setIsAdded] = useState(false);
 
   return (
     <Pressable
@@ -49,12 +50,15 @@ export default function PopularCardComponent({ isLastItem }) {
 
             <View style={{ flexDirection: "row" }}>
               <View style={styles.addIconView}>
-                <Icon
-                  name="add"
+                <TouchableOpacity
                   onPress={() => {
-                    console.log("added");
+                    console.log(isAdded ? "added" : "added and checked");
+                    setIsAdded(!isAdded);
                   }}
-                />
+                  hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
+                >
+                  <Icon name={isAdded ? "check" : "add"} />
+                </TouchableOpacity>
               </View>
               <View style={styles.ratingView}>
                 <Icon
