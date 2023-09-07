@@ -4,7 +4,7 @@ import styles from "../Screens/Home/HomeScreen.styles";
 import { Icon } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 
-export default function PopularCardComponent() {
+export default function PopularCardComponent({ isLastItem }) {
   const navigation = useNavigation();
 
   return (
@@ -14,7 +14,9 @@ export default function PopularCardComponent() {
         navigation.navigate("DetailsScreen");
       }}
     >
-      <View style={styles.popularCardMainView}>
+      <View
+        style={[styles.popularCardMainView, isLastItem && { marginBottom: 20 }]}
+      >
         <View style={styles.popularCardView}>
           <View style={styles.leftView}>
             <View style={{ marginLeft: 20 }}>
@@ -30,7 +32,7 @@ export default function PopularCardComponent() {
                 </Text>
               </View>
 
-              <View style={{ marginTop: 26 }}>
+              <View style={{ marginTop: 20 }}>
                 <Text style={{ fontSize: 16, fontWeight: "bold" }}>
                   Primavera Pizza
                 </Text>

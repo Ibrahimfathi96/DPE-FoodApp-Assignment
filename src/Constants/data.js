@@ -34,3 +34,21 @@ export const CategoriesData = [
     image: require("../../assets/images/soda-icon.png"),
   },
 ];
+export const IngredientsData = [
+  {
+    id: "1",
+    image: require("../../assets/images/ham.png"),
+  },
+  {
+    id: "2",
+    image: require("../../assets/images/tomato.png"),
+  },
+  {
+    id: "3",
+    image: require("../../assets/images/garlic.png"),
+  },
+  {
+    id: "4",
+    image: require("../../assets/images/cheese.png"),
+  },
+];

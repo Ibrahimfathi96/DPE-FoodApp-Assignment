@@ -105,7 +105,10 @@ export default function HomeScreen() {
 
         <View>
           {popularData.map((_, index) => (
-            <PopularCardComponent key={index.toString()} />
+            <PopularCardComponent
+              key={index.toString()}
+              isLastItem={index === popularData.length - 1}
+            />
           ))}
         </View>
       </ScrollView>
