@@ -23,8 +23,18 @@ export default function HomeScreen() {
           rounded
           size={40}
           source={require("../../../assets/images/profile.png")}
+          onPress={() => {
+            console.log("go to Profile Page or Open Drawer menu");
+          }}
         />
-        <Icon name="segment" type="material" size={32} />
+        <Icon
+          name="segment"
+          type="material"
+          size={32}
+          onPress={() => {
+            console.log("go to Profile Page or Open Drawer menu");
+          }}
+        />
       </View>
       <ScrollView>
         <View>
@@ -37,10 +47,12 @@ export default function HomeScreen() {
             name="search"
             type="material"
             size={30}
-            style={{ marginRight: 10 }}
+            onPress={() => {
+              console.log("Start Searching Action");
+            }}
           />
 
-          <View style={{ flex: 1 }}>
+          <View style={{ flex: 1, marginLeft: 10 }}>
             <TextInput
               placeholder="Search...."
               style={{ borderBottomWidth: 1 }}

@@ -17,8 +17,13 @@ export default function SignUp() {
   const signUpOnPress = () => {
     if (email === "" || password === "" || rePassword === "") {
       alert("Fields are required");
+      console.log("Fields are required");
     } else if (password !== rePassword) {
       alert("Error! Passwords do not match.");
+      console.log("Error! Passwords do not match.");
+    } else if (!email.includes("@gmail.com")) {
+      alert("Error! Please enter a valid email address."); //must contain @gmail.com
+      console.log("Error! Please enter a valid email address.");
     } else {
       console.log("Passwords match!");
       navigateToHome();
@@ -39,7 +44,7 @@ export default function SignUp() {
               setEmail(email);
             }}
             value={email}
-            maxLength={12}
+            maxLength={25}
             keyboardType="email-address"
             placeholderTextColor={"grey"}
           ></TextInput>
@@ -53,7 +58,7 @@ export default function SignUp() {
               setPassword(password);
             }}
             value={password}
-            maxLength={12}
+            maxLength={25}
             secureTextEntry
             placeholderTextColor={"grey"}
           ></TextInput>
@@ -67,7 +72,7 @@ export default function SignUp() {
               setRePassword(rePassword);
             }}
             value={rePassword}
-            maxLength={12}
+            maxLength={25}
             secureTextEntry
             placeholderTextColor={"grey"}
           ></TextInput>
