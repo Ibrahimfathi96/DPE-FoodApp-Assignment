@@ -3,14 +3,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "start",
+    justifyContent: "space-between",
     flexDirection: "column",
   },
   signUpText: {
-    flex: 1,
     fontSize: 50,
     color: "#2BC5CD",
     fontWeight: "bold",
+    textAlign: "center",
   },
   input: {
     paddingHorizontal: 25,
@@ -28,27 +28,29 @@ const styles = StyleSheet.create({
     marginTop: 10,
     backgroundColor: "white",
   },
-  inputView: { flex: 1, width: 300, marginVertical: 10 },
+  inputView: {
+    width: 300,
+  },
   text1: {
     textAlign: "center",
     color: "white",
-    fontSize: 20,
-    fontWeight: "bold",
+    fontSize: 26,
+    fontWeight: "500",
   },
   text2: {
     textAlign: "center",
     marginVertical: 20,
     color: "#27CEBA",
-    fontSize: 18,
-    fontWeight: "bold",
+    fontSize: 16,
+    fontWeight: "500",
   },
   button: {
     marginTop: 16,
     elevation: 12,
     shadowColor: "#1C90CA",
-    paddingVertical: 10,
-    backgroundColor: "#1592D7",
-    borderRadius: 30,
+    paddingVertical: 16,
+    backgroundColor: "#1592D7", //1891D9 12BCCE 17A7D4
+    borderRadius: 40,
   },
 });
 
