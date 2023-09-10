@@ -11,7 +11,7 @@ export default function SignUp() {
   const navigation = useNavigation();
 
   const navigateToHome = () => {
-    navigation.navigate("HomeScreen");
+    navigation.navigate("OldHome");
   };
 
   const signUpOnPress = () => {

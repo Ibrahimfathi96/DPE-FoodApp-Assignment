@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { View, Text, Image } from "react-native";
-import axiosClient from "../../api/axiosClient";
+import axiosClient from "../../Api/axiosClient";
 import HomeStyles from "./home_styles";
 
-const Home = () => {
+const OldHome = () => {
   const [userData, setUserData] = useState(null);
   const getUserData = async () => {
     try {
-      const response = await axiosClient.get("users/1");
+      const response = await axiosClient.get("user/4");
       setUserData(response);
     } catch (err) {
       console.log("Error==>", err);
@@ -18,7 +18,17 @@ const Home = () => {
   }, []);
 
   if (!userData) {
-    return <Text>Loading...</Text>;
+    return (
+      <View
+        style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Text style={{ fontWeight: "bold", fontSize: 18 }}>Loading...</Text>
+      </View>
+    );
   }
   const { name, location, avatar_url } = userData;
   return (
@@ -33,4 +43,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default OldHome;
